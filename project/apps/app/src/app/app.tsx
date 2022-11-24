@@ -1,26 +1,21 @@
-import * as React from "react";
-import { Stage, Text } from "react-pixi-fiber";
-import RotatingBunny from "./RotatingBunny";
-
-const width = 600;
-const height = 400;
-const options = {
-  backgroundColor: 0x56789a,
-  resolution: window.devicePixelRatio,
-  width: width,
-  height: height
-};
-const style = {
-  width: width,
-  height: height
-};
+import { Route, Routes, Link } from 'react-router-dom';
+import Experience1 from './views/Experience1';
 
 export function App() {
   return (
-    <Stage options={options} style={style}>
-      <Text x={100} y={100} text="Hello world!" />
-      <RotatingBunny position="50,50" />
-    </Stage>
+    <>
+      <div role="navigation">
+        <ul>
+          <li>
+            <Link to="/">Experience1</Link>
+          </li>
+        </ul>
+      </div>
+      <Routes>
+        <Route path="/" element={<Experience1 />} />
+      </Routes>
+      {/* END: routes */}
+    </>
   );
 }
 
