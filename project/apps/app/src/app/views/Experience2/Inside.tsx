@@ -1,17 +1,17 @@
-import * as React from "react";
+import React, { useRef, useEffect } from 'react';
 import { AppContext } from "react-pixi-fiber";
+import { Container } from "react-pixi-fiber";
 import Bunny from "./../Bunny";
 
-// http://pixijs.io/examples/#/basics/basic.js
-function RotatingBunny({ ...props }) {
-  const [rotation, setRotation] = React.useState(0);
+export function App() {
   const app = React.useContext(AppContext);
+  const container = useRef<any>();
 
   const animate = React.useCallback((delta: any) => {
     // just for fun, let's rotate mr rabbit a little
     // delta is 1 if running at 100% performance
     // creates frame-independent tranformation
-    setRotation(rotation => rotation + 0.1 * delta);
+    container.current.rotation -= 0.01 * delta;
   }, []);
 
   React.useEffect(() => {
@@ -22,7 +22,15 @@ function RotatingBunny({ ...props }) {
     };
   }, [app.ticker, animate]);
 
-  return <Bunny {...props} rotation={rotation} />;
+  return (
+    <Container position={[250, 250]} ref={container}>
+      <Bunny position="0,-50" />
+      <Bunny position="50,0" />
+      <Bunny position="-50,0" />
+      <Bunny position="0,0" />
+      <Bunny position="0,50" />
+    </Container>
+  );
 }
 
-export default RotatingBunny;
+export default App;
