@@ -8,6 +8,7 @@ import Experience6 from './views/Experience6';
 import Experience7 from './views/Experience7';
 import Experience8 from './views/Experience8';
 import Experience9 from './views/Experience9';
+import Experience10 from './views/Experience10';
 
 export function App() {
   return (
@@ -41,6 +42,9 @@ export function App() {
           <li>
             <Link to="/experience9">Experience9</Link>
           </li>
+          <li>
+            <Link to="/experience10">Experience10</Link>
+          </li>
         </ul>
       </div>
       <Routes>
@@ -53,6 +57,7 @@ export function App() {
         <Route path="/experience7" element={<Experience7 />} />
         <Route path="/experience8" element={<Experience8 />} />
         <Route path="/experience9" element={<Experience9 />} />
+        <Route path="/experience10" element={<Experience10 />} />
       </Routes>
       {/* END: routes */}
     </>
