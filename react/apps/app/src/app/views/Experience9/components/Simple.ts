@@ -4,7 +4,7 @@ import * as PIXI from 'pixi.js';
 export default CustomPIXIComponent(
   {
     customDisplayObject: (props: any) => {
-      const bunny = PIXI.Sprite.from('https://i.imgur.com/IaUrttj.png');
+      const bunny = PIXI.Sprite.from('http://localhost:4200/assets/bunny.png');
 
       bunny.anchor.set(0.5);
 

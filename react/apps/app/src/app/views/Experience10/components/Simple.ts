@@ -5,9 +5,7 @@ export default CustomPIXIComponent(
   {
     customDisplayObject: (props: any) => {
       return new PIXI.SimplePlane(
-        PIXI.Texture.from(
-          'https://cdnb.artstation.com/p/assets/images/images/008/977/853/medium/brandon-liu-mod9-grass-bliu2.jpg'
-        ),
+        PIXI.Texture.from('http://localhost:4200/assets/bg_grass.jpg'),
         10,
         10
       );

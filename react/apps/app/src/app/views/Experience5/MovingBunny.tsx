@@ -3,7 +3,7 @@ import { AppContext, Sprite } from 'react-pixi-fiber';
 import Bunny from './../Bunny';
 import * as PIXI from 'pixi.js';
 
-const bunny = 'https://i.imgur.com/IaUrttj.png';
+const bunny = 'http://localhost:4200/assets/bunny.png';
 const centerAnchor = new PIXI.Point(0.5, 0.5);
 
 // http://pixijs.io/examples/#/basics/basic.js
