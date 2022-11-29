@@ -9,6 +9,7 @@ import Experience8 from './Experience8';
 import Experience9 from './Experience9';
 import Experience10 from './Experience10';
 import Experience11 from './Experience11';
+import Experience12 from './Experience12';
 
 export default {
   Experience1,
@@ -22,4 +23,5 @@ export default {
   Experience9,
   Experience10,
   Experience11,
+  Experience12,
 };
